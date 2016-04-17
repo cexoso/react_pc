@@ -20,7 +20,7 @@ const checkController = {
         }
         return checked;
     }
-}
+} 
 const radioController = {
     outHandle(widget) {
         const {checked} = widget.state;
