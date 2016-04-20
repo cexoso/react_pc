@@ -1,44 +1,28 @@
-.logo{
-    background: URL('resources/logo.png') 50% 50%/auto 2.5rem no-repeat;
-    height:4.2rem;
-    width:100%;
-}
-.indexPage{
-    background-color: #dfdfdf;
-    min-height:100vh;
-    .head{
-        background-color: #fff;
-    }
-
-}
-.Carousel_container{
-    position: relative;
-}
-.Carousel_foot{
-    font-size: 1rem;
-    ul{
-        text-align: center;
-        width:100%;
-        font-size: 0;
-        li{
-            display: inline-block;
-            height:.5rem;
-            width:.5rem;
-            background-color: #fff;
-            margin:.25rem .2rem;
-            border-radius: .25rem;
-            &.active{
-                width:1rem;
-                background-color: #469de6;
-            }
+.component{
+    &.menu.menu_container{
+        cursor: default;
+        $height: 30px;
+        background: url("../resources/menubg.png") 0 0/100% $height;
+        height:$height;
+        display: inline-block;
+        width:auto;
+        line-height: $height;
+        color: #30588b;
+        font-weight: 800;
+        .content{
+            vertical-align: middle;
+            padding: 0 5px;
         }
-    }
-    .title{
-        height:2rem;
-        line-height: 2rem;
-        background-color: #fff;
-        color:#5a5a5a;
-        text-align: center;
-
+        &:not(:last-child):after{
+            content:"";
+            display:inline-block;
+            border-left:1px solid #999a9c;
+            border-right:1px solid #bcc9d1;
+            height:16px;
+            vertical-align: middle;
+            background-color: red;
+            position: relative;
+            z-index: 1;
+        }
     }
 }

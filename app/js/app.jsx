@@ -7,7 +7,8 @@ import {createStore,applyMiddleware} from "redux";
 import thunkMiddleware from "redux-thunk";
 // import immutable from "immutable";
 import '../base.scss';
-import '..css/components.scss';
+import '../css/index.scss';
+import '../css/components.scss';
 const store = applyMiddleware(thunkMiddleware)(createStore)(reducer);
 const rootElement = document.getElementById('container');
 render((
