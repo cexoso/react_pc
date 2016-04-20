@@ -13,13 +13,14 @@
     "bluebird": "^3.3.4",
     "es6-promise": "^3.1.2",
     "express": "^4.13.4",
-    "immutable": "^3.7.6",
+    "immutable": "^3.8.0",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-hammerjs": "^0.4.5",
     "react-redux": "^4.4.1",
     "react-router": "^2.0.1",
-    "redux": "^3.3.1"
+    "redux": "^3.3.1",
+    "redux-thunk": "^2.0.1"
   },
   "devDependencies": {
     "babel-core": "^6.7.2",
