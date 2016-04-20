@@ -15,7 +15,14 @@ export default class Index extends Component {
                 <h1>首页</h1>
                 <Count />
                 <div className="nav">
-                    <Menu /><Menu /><Menu />
+                    <Menu />
+                    <Menu />
+                    <Menu>
+                        <a href="">融智新闻</a>
+                        <a href="">行业新闻</a>
+                        <a href="">企业新闻</a>
+                        <a href="">政策要点</a>
+                    </Menu>
                 </div>
             </div>
         )

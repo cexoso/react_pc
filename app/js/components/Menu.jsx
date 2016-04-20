@@ -7,6 +7,9 @@ class Menu extends Component {
             <div className="component menu menu_container">
                 <span className="content">123123</span>
                 <span className="after"></span>
+                <div className="children">
+                    {this.props.children}
+                </div>
             </div>
         )
     }
