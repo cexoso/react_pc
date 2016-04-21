@@ -1,28 +1,25 @@
 import React, {Component} from 'react'
 function _(C) {
-    return class Timeout extends Component {
-        constructor(props) {
-            super(props)
-        }
+    return class Timeout extends Component {        
         componentWillMount() {
             this.Id = null;
         }
-        clear(){
-            if(this.Id){
+        clear() {
+            if (this.Id) {
                 window.clearTimeout(this.Id);
             }
         }
         componentWillUnmount() {
             this.clear();
         }
-        setTimeout() {
+        setTimeout(...o) {
             this.clear();
-            let a=window.setTimeout.apply(null, arguments);
-            this.Id=a;
+            const a = window.setTimeout.apply(null, o);
+            this.Id = a;
         }
         render() {
             return (
-                <C {...this.props} setTimeout={this.setTimeout.bind(this)} clear={this.clear.bind(this)}></C>
+                <C {...this.props} setTimeout={this.setTimeout.bind(this)} clear={this.clear.bind(this)} />
             )
         }
     }

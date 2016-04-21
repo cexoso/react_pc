@@ -1,4 +1,5 @@
 .component{
+    //菜单导航
     &.menu.menu_container{
         position: relative;
         cursor: default;
@@ -10,15 +11,54 @@
         line-height: $height;
         color: #30588b;
         font-weight: 800;
+        &.showing{
+            color:#fff;
+        }
         .content{
             vertical-align: middle;
             padding: 0 5px;
+            white-space: nowrap;
         }
-        .children{
+        .children_container{
             position: absolute;
-            top: $height;
-            display: inline-block;                    
             left: 0;
+            right: 0;
+            top: $height;
+            padding-top:15px;
+            z-index: 1;
+            .children{
+                $bgc: rgba(0, 51, 167, 0.6);
+                width:100%;
+                text-align: center;
+                border-bottom:5px solid #093977;
+                padding:5px;
+                display: inline-block;
+                background-color: $bgc;
+                .horn{
+                    $hornHeight: 10px;
+                    display: inline-block;
+                    display: inline-block;
+                    position: absolute;
+                    top: 15px - $hornHeight;
+                    left: 8px;
+                    border-top: 0px solid transparent;
+                    border-bottom: $hornHeight solid $bgc;
+                    border-left: 7/10*$hornHeight solid transparent;
+                    border-right: 7/10*$hornHeight solid transparent;
+                }
+                a{
+                    text-decoration: none;
+                }
+            }
+        }
+        $radius:5px;
+        &:first-child{
+            border-top-left-radius: $radius;
+            border-bottom-left-radius: $radius;
+        }
+        &:last-child{
+            border-top-right-radius: $radius;
+            border-bottom-right-radius: $radius;
         }
         &:not(:last-child):after{
             content:"";
@@ -30,6 +70,53 @@
             background-color: red;
             position: relative;
             z-index: 1;
+        }
+    }
+    //轮播组件
+    &.carousel_container{
+        display: inline-block;
+        position: relative;
+        width: 488px;
+        height :244px;
+        overflow: hidden;
+        .ul{
+            width: 100%;
+            transition: transform 0.3s;
+            white-space: nowrap;
+            .li{
+                display: inline-block;
+                list-style: none;
+                width:100%;
+                overflow: hidden;
+            }
+        }
+        .bottom{
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            left: 0px;
+            background-color:rgba(75, 113, 165, 0.75);
+            font-size:14px;
+            text-indent: 0.5em;
+            font-weight: 400;
+            color:#fff;
+            line-height:1.424;
+            .point{
+                float:right;
+                $size:10px;
+                li{
+                    display: inline-block;
+                    width:$size;
+                    height:$size;
+                    padding:5px;
+                    margin:2px;
+                    background-color: #fff;
+                    border-radius: 50%;
+                    &.active,&:hover{
+                        background-color: #0b3977;
+                    }
+                }
+            }
         }
     }
 }
