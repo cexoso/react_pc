@@ -19,7 +19,6 @@ class Menu extends Component {
     render() {
         const {content} = this.props;
         const {showMenu} = this.state;
-        console.log(showMenu)
         return (
             <div className={`component menu menu_container ${this.props.children && showMenu ? "showing" : ""}`}
                 onMouseEnter={this.onMouseEnter.bind(this)}

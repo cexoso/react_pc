@@ -119,4 +119,65 @@
             }
         }
     }
+    //分页绷脸的 tabs
+    &.tabs_container{
+        display: inline-block;
+        .tabs_point{
+            white-space: nowrap;
+            .point{
+                $height: 30px;
+                cursor: default;
+                display: inline-block;
+                position: relative;
+                border:1px solid #999;
+                background-color: #6c91bb;
+                border-top-left-radius: 12px;
+                border-top-right-radius: 12px 21px;
+                list-style: none;
+                height:$height;
+                line-height: $height;
+                &.active{
+                    z-index: 5;
+                    background-color: #c4d4e3;
+                    .right_inner{
+                        border-left: 13px solid #c4d4e3;
+                    }
+                }
+                .title{
+                    display: inline-block;
+                    width:100px;
+                    text-indent: 1.5em;
+                    text-overflow:ellipsis;
+                    white-space:nowrap;
+                    overflow:hidden;
+                }
+                .right{
+                    position: absolute;
+                    right: -10px;
+                    top:3px;
+                    z-index: 1;
+                    display: inline-block;
+                    border-top: $height - 3px solid transparent;
+                    border-bottom: 0px solid transparent;
+                    border-left: 14px solid #999;
+                    border-right: 0px solid transparent;
+                }
+                .right_inner{
+                    position: absolute;
+                    right: -8px;
+                    top:3px;
+                    z-index: 2;
+                    display: inline-block;
+                    border-top: $height - 4px solid transparent;
+                    border-bottom: 0px solid transparent;
+                    border-left: 13px solid #6c91bb;
+                    border-right: 0px solid transparent;
+                }
+            }
+        }
+        .content{
+            min-height:250px;
+            min-width:500px;
+        }
+    }
 }

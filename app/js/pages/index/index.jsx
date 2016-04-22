@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Count,* as conut from "./countContainer.jsx";
 import Menu from "components/Menu.jsx";
 import Carousel from "components/Carousel.jsx";
+import Tabs from "components/Tabs.jsx";
 
 import {combineReducers} from "redux";
 
@@ -54,6 +55,19 @@ export default class Index extends Component {
                     </Menu>
                 </div>
                 <Carousel imgs={imgs} />
+                <div>
+                    <Tabs className="tabs" contentClass="tabs_content">
+                        <div title="分页1">
+                            内容1
+                        </div>
+                        <div title="分页2">
+                            内容2
+                        </div>
+                        <div title="分页3">
+                            内容3
+                        </div>
+                    </Tabs>
+                </div>
             </div>
         )
     }
