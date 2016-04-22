@@ -139,6 +139,9 @@
                 &.active{
                     z-index: 5;
                     background-color: #c4d4e3;
+                    .title{
+                        color:#2f598b;
+                    }
                     .right_inner{
                         border-left: 13px solid #c4d4e3;
                     }
@@ -146,6 +149,7 @@
                 .title{
                     display: inline-block;
                     width:100px;
+                    color:#fff;
                     text-indent: 1.5em;
                     text-overflow:ellipsis;
                     white-space:nowrap;
@@ -157,7 +161,7 @@
                     top:3px;
                     z-index: 1;
                     display: inline-block;
-                    border-top: $height - 3px solid transparent;
+                    border-top: $height - 4px solid transparent;
                     border-bottom: 0px solid transparent;
                     border-left: 14px solid #999;
                     border-right: 0px solid transparent;
@@ -168,7 +172,7 @@
                     top:3px;
                     z-index: 2;
                     display: inline-block;
-                    border-top: $height - 4px solid transparent;
+                    border-top: $height - 5px solid transparent;
                     border-bottom: 0px solid transparent;
                     border-left: 13px solid #6c91bb;
                     border-right: 0px solid transparent;

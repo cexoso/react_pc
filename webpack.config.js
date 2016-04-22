@@ -12,7 +12,7 @@ module.exports = {
             loader: "style-loader!css-loader!sass-loader"
         },
         {
-            test: /.(png|jpg)$/, 
+            test: /.(png|jpg)$/,
             loader: 'url-loader?limit=8192'
         }]
     },
@@ -27,7 +27,7 @@ module.exports = {
     output: {
         path: path.join(__dirname, '/app/bundle'),
         filename: "[name].bundle.js",
-        publicPath: '/bundle'
+        publicPath: '/bundle/'
     },
     resolve: {
         alias: {
