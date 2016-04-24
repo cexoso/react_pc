@@ -3,12 +3,13 @@
     &.menu.menu_container{
         position: relative;
         cursor: default;
-        $height: 30px;
+        $height: 2.75rem;
         background: url("../resources/menubg.png") 0 0/100% $height;
         height:$height;
         display: inline-block;
-        width:auto;
+        width:9.05rem;
         line-height: $height;
+        text-align: center;
         color: #30588b;
         font-weight: 800;
         &.showing{
@@ -16,31 +17,33 @@
         }
         .content{
             vertical-align: middle;
-            padding: 0 5px;
             white-space: nowrap;
+            font-size:1.4rem;
+            width: 100%;
+            display: inline-block;
         }
         .children_container{
             position: absolute;
             left: 0;
             right: 0;
             top: $height;
-            padding-top:15px;
+            padding-top:0.75rem;
             z-index: 1;
             .children{
                 $bgc: rgba(0, 51, 167, 0.6);
+                font-size:1.3rem;
                 width:100%;
                 text-align: center;
-                border-bottom:5px solid #093977;
-                padding:5px;
+                border-bottom:0.25rem solid #093977;
+                padding:0.25rem;
                 display: inline-block;
                 background-color: $bgc;
                 .horn{
-                    $hornHeight: 10px;
-                    display: inline-block;
+                    $hornHeight: 0.5rem;
                     display: inline-block;
                     position: absolute;
-                    top: 15px - $hornHeight;
-                    left: 8px;
+                    top: 0.75rem - $hornHeight;
+                    left: 4rem;
                     border-top: 0px solid transparent;
                     border-bottom: $hornHeight solid $bgc;
                     border-left: 7/10*$hornHeight solid transparent;
@@ -65,9 +68,8 @@
             display:inline-block;
             border-left:1px solid #999a9c;
             border-right:1px solid #bcc9d1;
-            height:16px;
+            height:0.8rem;
             vertical-align: middle;
-            background-color: red;
             position: relative;
             z-index: 1;
         }
@@ -76,8 +78,8 @@
     &.carousel_container{
         display: inline-block;
         position: relative;
-        width: 488px;
-        height :244px;
+        width: 43.8rem;
+        height :24.4rem;
         overflow: hidden;
         .ul{
             width: 100%;
@@ -88,6 +90,10 @@
                 list-style: none;
                 width:100%;
                 overflow: hidden;
+                img{
+                    width: 43.8rem;
+                    height :24.4rem;
+                }
             }
         }
         .bottom{
@@ -96,20 +102,24 @@
             right: 0px;
             left: 0px;
             background-color:rgba(75, 113, 165, 0.75);
-            font-size:14px;
+            font-size:0.7rem;
             text-indent: 0.5em;
             font-weight: 400;
             color:#fff;
-            line-height:1.424;
+            line-height:2.5rem;
+            height:2.5rem;
+            font-size:1.3rem;
+
             .point{
                 float:right;
-                $size:10px;
+                $size:0.8rem;
                 li{
                     display: inline-block;
                     width:$size;
                     height:$size;
-                    padding:5px;
-                    margin:2px;
+
+                    margin:0.4rem;
+                    vertical-align: middle;
                     background-color: #fff;
                     border-radius: 50%;
                     &.active,&:hover{
@@ -125,14 +135,14 @@
         .tabs_point{
             white-space: nowrap;
             .point{
-                $height: 30px;
+                $height: 3.2rem;
                 cursor: default;
                 display: inline-block;
                 position: relative;
                 border:1px solid #999;
                 background-color: #6c91bb;
-                border-top-left-radius: 12px;
-                border-top-right-radius: 12px 21px;
+                border-top-left-radius: 0.6rem;
+                border-top-right-radius: 0.6rem 1.05rem;
                 list-style: none;
                 height:$height;
                 line-height: $height;
@@ -143,45 +153,57 @@
                         color:#2f598b;
                     }
                     .right_inner{
-                        border-left: 13px solid #c4d4e3;
+                        border-left: 0.65rem solid #c4d4e3;
                     }
                 }
                 .title{
                     display: inline-block;
-                    width:100px;
+                    width:7.5rem;
                     color:#fff;
-                    text-indent: 1.5em;
+                    font-size:1.6rem;
+                    text-indent: 0.5em;
                     text-overflow:ellipsis;
                     white-space:nowrap;
                     overflow:hidden;
                 }
                 .right{
                     position: absolute;
-                    right: -10px;
-                    top:3px;
+                    right: -0.5rem;
+                    top:0.15rem;
                     z-index: 1;
                     display: inline-block;
-                    border-top: $height - 4px solid transparent;
+                    border-top: $height - 0.2rem solid transparent;
                     border-bottom: 0px solid transparent;
-                    border-left: 14px solid #999;
+                    border-left: 0.7rem solid #999;
                     border-right: 0px solid transparent;
                 }
                 .right_inner{
                     position: absolute;
-                    right: -8px;
-                    top:3px;
+                    right: -0.4rem;
+                    top:0.15rem;
                     z-index: 2;
                     display: inline-block;
-                    border-top: $height - 5px solid transparent;
+                    border-top: $height - 0.25rem solid transparent;
                     border-bottom: 0px solid transparent;
-                    border-left: 13px solid #6c91bb;
+                    border-left: 0.65rem solid #6c91bb;
                     border-right: 0px solid transparent;
                 }
             }
         }
         .content{
-            min-height:250px;
-            min-width:500px;
+            height:23.4rem;
+            width:31.2rem;
         }
+    }
+
+    //Panel
+    &.panel{
+        height:3.2rem;
+        background: url("../resources/panelbg.png") 0 0/100% 100%;
+        width:19.35rem;
+        display: inline-block;
+        line-height: 2.6rem;
+        font-size: 1.5rem;
+        text-indent: 3.7em;
     }
 }

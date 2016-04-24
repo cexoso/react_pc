@@ -24,11 +24,6 @@ const rootRoute = {
 
 export const reducer = combineReducers({
     index: indexrc.reducer,
-    f04: f04rc.reducer,
-    q(state = {},action) {
-        console.log(action)
-        console.log(window.store && window.store.getState())   
-        return state
-    }
+    f04: f04rc.reducer
 });
 export default rootRoute;

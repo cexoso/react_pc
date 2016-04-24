@@ -25,7 +25,6 @@ class Menu extends Component {
                 onMouseLeave={this.onMouseLeave.bind(this)}
             >
                 <span className="content">{content}</span>
-                <span className="after" />
                 {this.props.children && <div className="children_container" style={{
                     display: showMenu ? "block" : "none"
                 }}

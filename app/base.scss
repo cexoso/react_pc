@@ -1,7 +1,8 @@
 
 html {
     box-sizing: border-box;
-    font-size: 62.5%; //刚好为10px;
+
+    font-size: 14x; //刚好为10px;
     font-family: "Microsoft YaHei", "Helvetica Neue", Arial, HelveticaNeue, Helvetica, "BBAlpha Sans", sans-serif;
 }
 html{
@@ -12,4 +13,9 @@ html{
     margin: 0;
     box-sizing: inherit;
     // transition: All 1s;
+}
+.clearfix::after{
+    content:" ";
+    display: table;
+    clear:both;
 }
